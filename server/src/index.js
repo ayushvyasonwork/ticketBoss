@@ -5,7 +5,7 @@ import Event from "./models/Event.js";
 import routes from "./routes/reservationRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 
-
+const PORT = process.env.PORT || 5000;
 dotenv.config();
 await connectDB();
 
@@ -30,6 +30,6 @@ await seedEvent();
 app.use("/api", routes);
 app.use("/api", adminRoutes);
 
-app.listen(process.env.PORT, () =>
-  console.log("Server running on port", process.env.PORT)
+app.listen(PORT, () =>
+  console.log("Server running on port", PORT)
 );
