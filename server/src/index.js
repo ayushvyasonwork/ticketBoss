@@ -33,3 +33,6 @@ app.use("/api", adminRoutes);
 app.listen(PORT, () =>
   console.log("Server running on port", PORT)
 );
+app.get("/", (req, res) => {
+  res.send("server is running on port " + PORT);
+});
