@@ -1,9 +1,10 @@
 const URL = "http://localhost:5000/api/reservations";
+// const URL = "https://ticketboss-8vlp.onrender.com/api/reservations";
 
 async function runConcurrencyTest() {
   const requests = [];
 
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 1; i <= 170; i++) {
     requests.push(
       fetch(URL, {
         method: "POST",
